@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏攻略 - PocketChampion | 精灵训练师指南</title>
+    <meta name="description" content="PocketChampion游戏攻略，包括精灵培养、战斗策略、太晶化和Mega进化技巧，帮助你成为最强训练师">
+    <meta name="keywords" content="PocketChampion, 游戏攻略, 精灵培养, 战斗策略, 太晶化, Mega进化">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="alternate" hreflang="en" href="https://www.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="es" href="https://es.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="pt" href="https://pt.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="zh-tw" href="https://zhtw.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.PocketChampion.net/guides.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-dark bg-opacity-80 backdrop-blur-md text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="PocketChampion Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">PocketChampion</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-accent transition-colors">首页</a>
+                    <a href="features.html" class="font-medium hover:text-accent transition-colors">游戏特色</a>
+                    <a href="guides.html" class="font-medium hover:text-accent transition-colors">游戏攻略</a>
+                    <a href="codes.html" class="font-medium hover:text-accent transition-colors">兑换码</a>
+                    <a href="articles.html" class="font-medium hover:text-accent transition-colors">文章资讯</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <select class="bg-dark text-white border border-gray-700 rounded px-2 py-1 text-sm" onchange="window.location.href = this.value">
+                            <option value="https://www.PocketChampion.net">English</option>
+                            <option value="https://es.PocketChampion.net">Español</option>
+                            <option value="https://pt.PocketChampion.net">Português</option>
+                            <option value="https://zh.PocketChampion.net" selected>简体中文</option>
+                            <option value="https://zhtw.PocketChampion.net">繁體中文</option>
+                        </select>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fa fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 font-medium hover:text-accent transition-colors">首页</a>
+                <a href="features.html" class="block py-2 font-medium hover:text-accent transition-colors">游戏特色</a>
+                <a href="guides.html" class="block py-2 font-medium hover:text-accent transition-colors">游戏攻略</a>
+                <a href="codes.html" class="block py-2 font-medium hover:text-accent transition-colors">兑换码</a>
+                <a href="articles.html" class="block py-2 font-medium hover:text-accent transition-colors">文章资讯</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="relative h-64 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../images/SimplifiedChinese/微信图片_2026-03-16_101307_592.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/90"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">游戏攻略</h1>
+            <p class="text-lg md:text-xl">成为最强训练师的指南</p>
+        </div>
+    </section>
+
+    <!-- 攻略内容 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 左侧边栏 -->
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-2xl p-6 shadow-md mb-8">
+                        <h3 class="text-xl font-bold mb-4">攻略分类</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#beginner" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-star mr-2"></i>
+                                    新手指南
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#training" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-heart mr-2"></i>
+                                    精灵培养
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#battle" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-bolt mr-2"></i>
+                                    战斗策略
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#evolution" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-magic mr-2"></i>
+                                    太晶化与Mega进化
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#team" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-users mr-2"></i>
+                                    队伍搭配
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light rounded-2xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold mb-4">热门攻略</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    初始精灵选择指南
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    快速升级技巧
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    太晶化最佳搭配
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    多人对战必胜策略
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右侧内容 -->
+                <div class="md:col-span-2">
+                    <!-- 新手指南 -->
+                    <div id="beginner" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">新手指南</h2>
+                        <p class="text-gray-600 mb-6">作为新手训练师，你需要了解游戏的基本玩法和操作。以下是一些帮助你快速上手的建议：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">选择初始精灵</h3>
+                                    <p class="text-gray-600">从1-9代御三家中选择一个作为你的初始伙伴。不同的精灵有不同的属性和技能，根据你的游戏风格选择适合的精灵。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">完成新手任务</h3>
+                                    <p class="text-gray-600">游戏会引导你完成一系列新手任务，帮助你熟悉游戏操作和基本玩法。完成这些任务可以获得丰厚的奖励。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">探索游戏世界</h3>
+                                    <p class="text-gray-600">在游戏中探索不同的区域，收集精灵，挑战道馆，提升你的训练师等级。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 精灵培养 -->
+                    <div id="training" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">精灵培养</h2>
+                        <p class="text-gray-600 mb-6">精灵的培养是成为最强训练师的关键。以下是一些培养精灵的技巧：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">等级提升</h3>
+                                    <p class="text-gray-600">通过战斗和使用经验值道具来提升精灵的等级。等级越高，精灵的能力值就越强。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">努力值分配</h3>
+                                    <p class="text-gray-600">通过战斗获得努力值，合理分配努力值可以让你的精灵在特定方面更加强大。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">技能学习</h3>
+                                    <p class="text-gray-600">为你的精灵学习合适的技能，根据精灵的属性和战斗风格选择最佳技能组合。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 战斗策略 -->
+                    <div id="battle" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">战斗策略</h2>
+                        <p class="text-gray-600 mb-6">战斗是游戏的核心玩法，掌握战斗策略可以让你在对战中占据优势：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">属性克制</h3>
+                                    <p class="text-gray-600">了解属性克制关系，使用克制对方的技能可以造成更多伤害。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">技能搭配</h3>
+                                    <p class="text-gray-600">为你的精灵搭配不同类型的技能，以应对各种情况。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">状态变化</h3>
+                                    <p class="text-gray-600">利用状态变化技能来削弱对手，提升自己的能力。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 太晶化与Mega进化 -->
+                    <div id="evolution" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">太晶化与Mega进化</h2>
+                        <p class="text-gray-600 mb-6">太晶化和Mega进化是游戏中的重要战斗机制：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">太晶化</h3>
+                                    <p class="text-gray-600">太晶化可以改变精灵的属性，增强特定技能的威力。选择合适的太晶属性可以让你的精灵在战斗中更具优势。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">Mega进化</h3>
+                                    <p class="text-gray-600">Mega进化可以大幅提升精灵的能力值，改变精灵的形态和特性。在关键时刻使用Mega进化可以扭转战局。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">时机选择</h3>
+                                    <p class="text-gray-600">掌握太晶化和Mega进化的时机，在合适的时刻使用可以最大化它们的效果。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 队伍搭配 -->
+                    <div id="team" class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <h2 class="text-2xl font-bold mb-4">队伍搭配</h2>
+                        <p class="text-gray-600 mb-6">组建一个平衡的队伍是取得胜利的关键：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">属性平衡</h3>
+                                    <p class="text-gray-600">选择不同属性的精灵，以应对各种敌人。避免队伍中存在共同的属性弱点。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">角色分工</h3>
+                                    <p class="text-gray-600">为队伍中的精灵分配不同的角色，如攻击手、防御手、辅助手等。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">战术配合</h3>
+                                    <p class="text-gray-600">设计队伍的战术配合，如接力棒、天气队、空间队等。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">立即开始你的冒险</h2>
+            <p class="text-xl mb-8">应用这些攻略技巧，成为最强训练师</p>
+            <a href="https://game.6266game.cn/website/zdbjl/?w7cdSjjj" class="bg-white text-primary font-bold py-4 px-10 rounded-xl border-2 border-white btn-hover inline-block">
+                <i class="fa fa-download mr-2"></i>立即下载
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PocketChampion</h3>
+                    <p class="text-gray-400">一款角色扮演战斗游戏，1-9世代1000+精灵集结</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章资讯</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">support@pocketchampion.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PocketChampion. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

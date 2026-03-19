@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏特色 - PocketChampion | 1-9世代精灵集结</title>
+    <meta name="description" content="了解PocketChampion的游戏特色，包括1-9世代1000+精灵集结、太晶化+Mega战斗共存、3D高清/像素化自由切换、双人对战和多人太晶对战">
+    <meta name="keywords" content="PocketChampion, 游戏特色, 精灵集结, 太晶化, Mega进化, 多人对战">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="alternate" hreflang="en" href="https://www.PocketChampion.net/features.html">
+    <link rel="alternate" hreflang="es" href="https://es.PocketChampion.net/features.html">
+    <link rel="alternate" hreflang="pt" href="https://pt.PocketChampion.net/features.html">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh.PocketChampion.net/features.html">
+    <link rel="alternate" hreflang="zh-tw" href="https://zhtw.PocketChampion.net/features.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.PocketChampion.net/features.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-dark bg-opacity-80 backdrop-blur-md text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="PocketChampion Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">PocketChampion</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-accent transition-colors">首页</a>
+                    <a href="features.html" class="font-medium hover:text-accent transition-colors">游戏特色</a>
+                    <a href="guides.html" class="font-medium hover:text-accent transition-colors">游戏攻略</a>
+                    <a href="codes.html" class="font-medium hover:text-accent transition-colors">兑换码</a>
+                    <a href="articles.html" class="font-medium hover:text-accent transition-colors">文章资讯</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <select class="bg-dark text-white border border-gray-700 rounded px-2 py-1 text-sm" onchange="window.location.href = this.value">
+                            <option value="https://www.PocketChampion.net">English</option>
+                            <option value="https://es.PocketChampion.net">Español</option>
+                            <option value="https://pt.PocketChampion.net">Português</option>
+                            <option value="https://zh.PocketChampion.net" selected>简体中文</option>
+                            <option value="https://zhtw.PocketChampion.net">繁體中文</option>
+                        </select>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fa fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 font-medium hover:text-accent transition-colors">首页</a>
+                <a href="features.html" class="block py-2 font-medium hover:text-accent transition-colors">游戏特色</a>
+                <a href="guides.html" class="block py-2 font-medium hover:text-accent transition-colors">游戏攻略</a>
+                <a href="codes.html" class="block py-2 font-medium hover:text-accent transition-colors">兑换码</a>
+                <a href="articles.html" class="block py-2 font-medium hover:text-accent transition-colors">文章资讯</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="relative h-64 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/SimplifiedChinese/1.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/90"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">游戏特色</h1>
+            <p class="text-lg md:text-xl">探索PocketChampion的独特玩法和精彩内容</p>
+        </div>
+    </section>
+
+    <!-- 游戏特色详情 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- 特色1 -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
+                <div class="w-full md:w-1/2">
+                    <img src="images/SimplifiedChinese/2.jpg" alt="1-9世代精灵集结" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4">1-9世代1000+精灵集结</h2>
+                    <p class="text-gray-600 mb-6">《PocketChampion》收录了从第1代到第9代的所有精灵，总数超过1000只！你可以选择任何一代的御三家作为你的初始伙伴，开始你的冒险之旅。无论是经典的小火龙、妙蛙种子、杰尼龟，还是最新的新叶喵、呆火鳄、润水鸭，都能在游戏中找到它们的身影。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>1-9代御三家任你选择</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>1000+精灵等你收集</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>完整的进化链和形态变化</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特色2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-16">
+                <div class="w-full md:w-1/2">
+                    <img src="images/SimplifiedChinese/3.jpg" alt="太晶化+Mega战斗共存" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4">太晶化+Mega战斗共存</h2>
+                    <p class="text-gray-600 mb-6">《PocketChampion》创新性地将太晶化和Mega进化系统结合在一起，让战斗策略更加丰富多样。你可以根据战场情况，选择合适的进化方式，打造属于你的独特战斗风格。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>太晶化系统，改变精灵属性</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>Mega进化，提升精灵能力</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>策略搭配，打造独特战斗风格</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特色3 -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
+                <div class="w-full md:w-1/2">
+                    <img src="images/SimplifiedChinese/4.jpg" alt="3D高清/像素化自由切换" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4">3D高清/像素化自由切换</h2>
+                    <p class="text-gray-600 mb-6">《PocketChampion》支持3D高清和像素化两种画面风格的自由切换，让你在现代视觉效果和怀旧经典风格之间自由选择。同时，战斗视角也可以自由调节，为你带来全新的游戏体验。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>3D高清画面，精美细腻</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>像素化风格，怀旧经典</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>自由调节战斗视角</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 特色4 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <img src="images/SimplifiedChinese/5.jpg" alt="双人对战、多人太晶对战" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-2xl font-bold mb-4">双人对战、多人太晶对战</h2>
+                    <p class="text-gray-600 mb-6">《PocketChampion》提供了丰富的对战玩法，包括传统的双人对战和创新的多人太晶对战。你可以与好友一起组队，挑战强大的对手，体验团队合作的乐趣。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>传统双人对战</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>多人太晶对战</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check-circle text-secondary mr-2"></i>
+                            <span>团队合作，策略配合</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">立即开始你的冒险</h2>
+            <p class="text-xl mb-8">加入PocketChampion，体验这些精彩特色</p>
+            <a href="https://game.6266game.cn/website/zdbjl/?w7cdSjjj" class="bg-white text-primary font-bold py-4 px-10 rounded-xl border-2 border-white btn-hover inline-block">
+                <i class="fa fa-download mr-2"></i>立即下载
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PocketChampion</h3>
+                    <p class="text-gray-400">一款角色扮演战斗游戏，1-9世代1000+精灵集结</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">游戏特色</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors">游戏攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兑换码</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章资讯</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">support@pocketchampion.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PocketChampion. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
